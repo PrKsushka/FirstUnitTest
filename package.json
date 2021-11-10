@@ -4,7 +4,9 @@
   "description": "a simple unit testing mocha",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "lint": "eslint ./",
+    "coverage": "nyc npm test"
   },
   "repository": {
     "type": "git",
@@ -16,10 +18,15 @@
     "url": "https://github.com/PrKsushka/FirstUnitTest/issues"
   },
   "homepage": "https://github.com/PrKsushka/FirstUnitTest#readme",
+  "nyc": {
+    "reporter": "html"
+  },
   "devDependencies": {
     "chai": "^4.3.4",
     "eslint": "^8.2.0",
     "eslint-config-google": "^0.14.0",
-    "mocha": "^9.1.3"
+    "mocha": "^9.1.3",
+    "mochawesome": "^7.0.1",
+    "nyc": "^15.1.0"
   }
 }
